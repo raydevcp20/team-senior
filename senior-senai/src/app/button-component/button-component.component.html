@@ -1,0 +1,15 @@
+<div>
+    <button [disabled]="disabled" (click)="clicou.emit('Cliquei no botão')">{{ label }}</button>
+
+    <!-- declaração do ngFor -->
+    <!-- <h1>{{ label }}</h1>
+    <ul>
+        <li *ngFor="let filme of array" (click)="clicou.emit(filme)">{{filme}}</li>
+    </ul> -->
+
+    <!-- ngFor literal -->
+    <!-- <ul>
+        <li (click)="clicou.emit(array[0])">{{ array[0] }}</li>
+        <li (click)="clicou.emit(array[1])">{{ array[1] }}</li>
+    </ul> -->
+</div>

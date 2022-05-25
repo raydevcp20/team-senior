@@ -1,0 +1,6 @@
+
+/* Classe a ser adicionada quando a rota estiver ativa */
+.selected{
+    text-decoration: underline;
+    color: rgb(10, 63, 239) !important;
+}
