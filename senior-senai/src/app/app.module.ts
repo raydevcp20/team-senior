@@ -4,26 +4,22 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { ButtonComponentComponent } from './button-component/button-component.component';
 import { AppRoutingModule } from './app-routing.module';
-import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { SigninComponent } from './home/signin/signin.component';
-import { SignupComponent } from './home/signup/signup.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonComponentComponent,
-    HomeComponent,
     NotFoundComponent,
-    SigninComponent,
-    SignupComponent,
-    NavbarComponent
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

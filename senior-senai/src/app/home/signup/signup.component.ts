@@ -14,9 +14,11 @@ export class SignupComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // this.nome = this.activateRouting.snapshot.params.nome;
-    console.log(this.activateRouting)
+    //Captura o parametro de rota nome
+    this.nome = this.activateRouting.snapshot.params.nome;
     // this.nome = this.routeSnapshot.params.nome;
+
+    console.log(this.activateRouting);
   }
 
 }

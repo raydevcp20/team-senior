@@ -7,7 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./signin.component.css']
 })
 export class SigninComponent implements OnInit {
-
+  text:string = "";
+  
   constructor(
     private router: Router
   ) { }

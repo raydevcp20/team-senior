@@ -1,15 +1,26 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { SigninComponent } from './home/signin/signin.component';
-import { SignupComponent } from './home/signup/signup.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' }, //Rota default para a rota / irá enviar para a rota /home
-    { path:'home', component: HomeComponent},
-    { path:'signin', component: SigninComponent},
-    { path:'signup', component: SignupComponent},
+
+    //Forma de gerenciamento de rotas filhas com children
+    // { path:'home', component: HomeComponent, 
+    //     children: [
+    //         {path: 'signin', component: SigninComponent},  // Rota - home/signin
+    //         {path:'signup', component: SignupComponent},  // Rota - home/signup
+    //     ]
+    // },
+
+    //Forma de importação para módulos de rotas filhas em outros arquivos
+    { path: 'home', 
+        loadChildren: 
+            () => 
+            import('./home/home-routing.module')
+            .then(m => m.HomeRoutingModule)
+            .catch()
+    },
     { path: '**', component: NotFoundComponent} //Rota para url não declaradas
 ];
 
