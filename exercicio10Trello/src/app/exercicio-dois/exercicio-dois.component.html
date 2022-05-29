@@ -1,0 +1,12 @@
+<div class="card" style="width: 18rem">
+    <div class="card-header {{classHeader}} text-white">
+        <h5 class="card-title">{{ title }}</h5>
+        <h6 class="card-subtitle mb-2">{{ subtitle }}</h6>
+    </div>
+    <div class="card-body {{classBody}}">
+        <p class="card-text">
+            {{ body }}
+        </p>
+        <button type="button" class="btn btn-light" (click)="mudeCores.emit()">Trocar cor</button>
+    </div>
+</div>

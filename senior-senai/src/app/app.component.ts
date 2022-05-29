@@ -22,7 +22,7 @@ export class AppComponent implements OnInit{
     //Uso do service da pokeapi
     this.servico.getPokemons().subscribe(
       (pokemons: any)=>{
-        console.log(pokemons);
+        // console.log(pokemons);
       }
     );
   }

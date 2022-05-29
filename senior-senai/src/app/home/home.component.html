@@ -1,5 +1,37 @@
 <p>home works!</p>
 
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>
+        <button class="btn btn-primary" (click)="redirectTo(1)">Ver mais</button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>
+        <button class="btn btn-primary">
+          <a routerLink="/home/user/2">Ver mais</a>
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>
+        <button class="btn btn-primary">
+          <a routerLink="/home/user/3">Ver mais</a>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
 <!-- O router usando o modulo de rotas filhas externas (quando se tem varios
 routing.module) se torna opcional -->
 <!-- <router-outlet></router-outlet> -->

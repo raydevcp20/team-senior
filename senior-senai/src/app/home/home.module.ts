@@ -8,6 +8,9 @@ import { SignupComponent } from './signup/signup.component';
 import { SigninComponent } from './signin/signin.component';
 import { HomeComponent } from './home.component';
 import { FormsModule } from '@angular/forms';
+import { DetalhamentoComponent } from './detalhamento/detalhamento.component';
+import { RouterModule } from '@angular/router';
+import { AdmComponent } from './adm/adm.component';
 
 
 @NgModule({
@@ -16,12 +19,15 @@ import { FormsModule } from '@angular/forms';
     SigninComponent,
     SignupComponent,
     LoginComponent,
-    CadastroComponent
+    CadastroComponent,
+    DetalhamentoComponent,
+    AdmComponent
   ],
   imports: [
     CommonModule,
     HomeRoutingModule,
     FormsModule,
+    RouterModule
   ]
 })
 export class HomeModule { }
