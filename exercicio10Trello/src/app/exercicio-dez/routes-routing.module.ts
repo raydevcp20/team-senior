@@ -14,7 +14,7 @@ const routes: Routes = [
     component: CompraFinalizadaComponent,
     canActivate: [AuthGuard],
   },
-  { path: '**', component: HomeComponent },
+  { path: '**', component: LoginComponent },
 ];
 
 @NgModule({

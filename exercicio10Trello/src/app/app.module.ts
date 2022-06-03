@@ -6,19 +6,20 @@ import { AppComponent } from './app.component';
 import { ExercicioUmComponent } from './exercicio-um/exercicio-um.component';
 import { ExercicioDoisComponent } from './exercicio-dois/exercicio-dois.component';
 import { ExercicioDezComponent } from './exercicio-dez/exercicio-dez.component';
-import { HttpClientModule } from '@angular/common/http';
+import { UppercaseSeniorPipe } from './pipes/uppercase-senior.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     ExercicioUmComponent,
     ExercicioDoisComponent,
-    ExercicioDezComponent
+    ExercicioDezComponent,
+    UppercaseSeniorPipe
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

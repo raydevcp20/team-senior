@@ -1,4 +1,3 @@
-import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user: any = {}
+  user: any = {};
 
   constructor(
     private router: Router
@@ -18,7 +17,6 @@ export class LoginComponent implements OnInit {
   }
 
   salvarUser(){
-    console.log(this.user.email)
     if(this.user.email){
       //irá passar o objeto JSON para string
       this.user = JSON.stringify(this.user);
