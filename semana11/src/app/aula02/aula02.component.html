@@ -1,0 +1,98 @@
+<!-- <p>Resolvendo o exercico 01 do slide</p> -->
+
+<!-- <input type="text" #input (keyup)="typing()"> -->
+
+<!-- <button
+  [ngClass]="{ 'clicked': clicou }"
+  class="card card-small"
+  (click)="clicou = !clicou"
+>
+  <span> + New Component</span>
+</button> -->
+
+<!-- ngStyle -->
+
+<!-- <button
+  [ngStyle]="{
+    'color': clicou ? 'red' : 'pink',
+    'backgroundColor': clicou ? 'black' : 'aquamarine',
+    'fontSize' : tamanho + 'px'
+  }"
+>
+  Add component
+</button> -->
+
+<!-- <button [ngStyle]="{ 'marginTop' }"> 
+    Add component
+</button> -->
+
+<!-- <p>Resolvendo o exercico 02 do slide</p>
+
+
+<input type="text" [(ngModel)]="tamanhoFonte" />
+<button 
+    [ngStyle]="{ 
+        'backgroundColor' : tamanhoFonte ? 'orange' : 'gray',
+        'fontSize' : tamanhoFonte + 'px',
+        'border' : tamanhoFonte ? '2px solid orange' : '2px solid gray'
+     }"> 
+    Salvar    
+</button> -->
+
+<!-- Outros Exemplos -->
+
+<!-- <div
+  [ngStyle]="{ 
+      backgroundColor: clicou ? 'black' : 'white', 
+      color: clicou ? 'white' : 'black'
+    }"
+>
+  <h1>Titulo da aplicação</h1>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum esse
+    consectetur natus repellat, provident excepturi labore laudantium pariatur?
+    Dolores deleniti accusamus nulla accusantium neque, dolorem repudiandae
+    iusto animi vero eos?
+  </p>
+
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum esse
+    consectetur natus repellat, provident excepturi labore laudantium pariatur?
+    Dolores deleniti accusamus nulla accusantium neque, dolorem repudiandae
+    iusto animi vero eos?
+  </p>
+
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsum esse
+    consectetur natus repellat, provident excepturi labore laudantium pariatur?
+    Dolores deleniti accusamus nulla accusantium neque, dolorem repudiandae
+    iusto animi vero eos?
+  </p>
+</div>
+
+<button [ngClass]="{ 'btn-lindo': clicou }" (click)="clicou = !clicou">
+  Dark mode
+</button> -->
+
+<!-- ngSwitch, ngSwitchCase -->
+
+<!-- <div [ngSwitch]="choseAlert">
+  <input type="text" [(ngModel)]="choseAlert" />
+  <div *ngSwitchCase="12" class="alert alert-primary" role="alert">
+    This is a primary alert—check it out!
+  </div>
+  <div *ngSwitchCase="'20'" class="alert alert-secondary" role="alert">
+    This is a secondary alert—check it out!
+  </div>
+  <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+    This is a success alert—check it out!
+  </div>
+</div> -->
+
+<!-- Outro Exemplo -->
+<div [ngSwitch]="tagTitle">
+    <h1 *ngSwitchCase="'h1'">Sou a tag h1</h1>
+    <h2 *ngSwitchCase="'h2'">Sou a tag h2</h2>
+    <h3 *ngSwitchCase="'h3'">Sou a tag h3</h3>
+    <h4 *ngSwitchDefault>Sou a tag h4</h4>
+</div>
