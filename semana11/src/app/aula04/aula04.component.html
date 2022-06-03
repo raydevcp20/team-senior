@@ -1,0 +1,83 @@
+<p>aula04 works!</p>
+
+<h1>ngModel</h1>
+<!-- Exemplo de formulário  -->
+<div class="container">
+    <!-- Para utilizar um template driven na aplicação chame a variavel de template # 
+    no exemplo abaixo ela referencia a lib ngForm e ao clicar no botão que é do tipo 
+    submit ele ativa o evento ngSubmit -->
+  <form #cadastro="ngForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label>Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        [(ngModel)]="usuario.email"
+        name="email"
+        placeholder="Enter email"
+        pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+      />
+      <!-- O pattern acima é para validar o formato de email .
+      Teste com o valor teste@gmail.com = adiciona a classe ng-valid
+      Teste com o valor teste@gmail. = adiciona a classe ng-invalid -->
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input
+        type="number"
+        class="form-control"
+        [(ngModel)]="usuario.password"
+        name="password"
+        min="50"
+        placeholder="Password"
+      />
+    </div>
+    <div class="form-group">
+      <label>Selecione o estado</label>
+      <!-- o ngModel no select precisa do atributo 'value' 
+      para fazer a atribuição de valor usando o ngModel -->
+      <select class="form-control" name="estado" [(ngModel)]="usuario.state">
+        <option value="Pernambuco">PE</option>
+        <option value="Rio Grande do Norte">RN</option>
+        <option value="São Paulo">SP</option>
+      </select>
+    </div>
+    <label for="">Favorito</label>
+    <!-- o ngModel no input do tipo radio precisa do atributo 'value' 
+      para fazer a atribuição de valor usando o ngModel -->
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        [(ngModel)]="usuario.favorite"
+        name="favorito"
+        value="toto"
+      />
+      <label class="form-check-label"> Toto </label>
+    </div>
+    <div class="form-check">
+      <input
+        class="form-check-input"
+        type="radio"
+        [(ngModel)]="usuario.favorite"
+        name="favorito"
+        value="gato"
+      />
+      <label class="form-check-label"> Gato </label>
+    </div>
+    <div class="form-check">
+        <!-- o ngModel no checkbox não precisa do atributo 'value' 
+      para fazer a atribuição de valor usando o ngModel o valor a ser 
+      atribuido será true para quando estiver checked e false quando não está -->
+      <input
+        type="checkbox"
+        [(ngModel)]="usuario.isActive"
+        name="ativo"
+        class="form-check-input"
+      />
+      <label class="form-check-label">Me manter ativo?</label>
+    </div>
+    <!-- lembrar do type="submit" -->
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
