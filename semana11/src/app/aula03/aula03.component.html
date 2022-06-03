@@ -1,0 +1,40 @@
+<p>aula03 works!</p>
+
+<div class="container">
+  <div class="form-group">
+    <label>Senha: </label>
+    <input
+      type="password"
+      [(ngModel)]="password"
+      class="form-control"
+      placeholder="Digite a senha"
+    />
+    <small class="form-text text-danger" *ngIf="password.length <= 6"
+      >Senha deve conter mais que 6 caracteres.</small
+    >
+  </div>
+
+  <div class="form-group">
+    <label>Email:</label>
+    <input
+      type="email"
+      [(ngModel)]="email"
+      class="form-control"
+      placeholder="name@example.com"
+    />
+    <small class="form-text text-muted" *ngIf="!email.length; else caiuNoElse"
+      >Digite um email.</small
+    >
+  </div>
+
+  <ng-template #caiuNoElse>
+    <small class="form-text text-muted"
+      >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
+      reiciendis eos consectetur nihil. Numquam fugiat dolores dignissimos
+      excepturi, assumenda doloremque, reprehenderit dicta nobis perspiciatis in
+      impedit fugit rerum voluptates quia?</small
+    >
+  </ng-template>
+
+  <button *ngIf="password.length > 6" class="btn btn-primary">Salvar</button>
+</div>
