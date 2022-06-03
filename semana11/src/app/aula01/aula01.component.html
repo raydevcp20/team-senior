@@ -1,0 +1,15 @@
+<div class="bg-text" #div>
+    <h1>{{'Sou O título da AULA 01' | lowerCaseSenior }}</h1>
+    
+    <input type="text" placeholder="Digite um valor..." #input>
+    <input type="text" placeholder="Digite um valor..." #input>
+    <input type="text" placeholder="Digite um valor..." #input>
+</div>
+
+<ul>
+    <li>Pipe cpf: {{ '11122233344' | cpfSenior}}</li>
+    <li>Pipe json: {{ json | json }}</li>
+    <li>Pipe uppercase: {{ 'Texto qualquer'| uppercase}}</li>
+    <li>Pipe currency: {{ 2000 | currency: 'BRL' }}</li>
+    <li>Pipe data: {{ '2000/11/19' | date: 'longDate' : 'pt-br'}}</li>
+</ul>
