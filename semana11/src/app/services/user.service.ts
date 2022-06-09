@@ -15,6 +15,10 @@ export class UserService {
     return this.http.post('http://localhost:3000/create/user', user);
   }
 
+  getPokemons(){
+    return this.http.get('https://pokeapi.co/api/v2/pokemon');
+  }
+
   updateUser(){
 
   }
